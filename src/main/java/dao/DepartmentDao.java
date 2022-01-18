@@ -1,16 +1,27 @@
 package dao;
-import models.DepartmentMyNews;
-import models.MyDepartment;
-import models.MyUser;
+
+import models.Department;
+import models.News;
+import models.User;
 
 import java.util.List;
+
 public interface DepartmentDao {
-    List<MyDepartment> getAllDepartments();
-    List<MyUser> getMyDepartmentUsersById(int id);
-    List<DepartmentMyNews> getDepartmentNewsById(int id);
-    void addDepartment(MyDepartment myDepartment);
-    MyDepartment findDepartmentById(int id);
-    void updateDepartment(MyDepartment myDepartment, String name, String description);
-    void clearAllDepartments();
+
+    //CREATE
+    void save(Department department);
+    void saveNewsAndDepartment(Department department, News news);
+    void saveUsersAndDepartment(Department department, User user);
+
+    //READ
+    Department findById(int id);
+    List<Department> getAll();
+    List<News> getAllDepartmentNews(int departmentId);
+    List<User> getAllDepartmentUsers(int departmentId);
+
+    //DESTROY
+    void clearAll();
+    void clearAllNewsAndDepartments();
+    void clearAllUsersAndDepartments();
 }
 

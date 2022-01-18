@@ -5,7 +5,7 @@ import org.sql2o.Sql2o;
 
 import java.util.List;
 
-public class sqy20UserDao implements UserDao{
+public class sql2oUserDao implements UserDao{
     private final Sql2o sql2o;
     public MySql2OMyUserDao(Sql2o sql2o) {
         this.sql2o = sql2o;

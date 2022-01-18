@@ -6,7 +6,7 @@ import org.sql2o.Sql2o;
 import java.util.ArrayList;
 import java.util.List;
 
-public class sql20NewsDao implements NewsDao{
+public class sql2oNewsDao implements NewsDao{
     private final Sql2o sql2o;
     public static final String GENERAL_NEWS="general";
     public static final String DEPARTMENT_NEWS="department";
